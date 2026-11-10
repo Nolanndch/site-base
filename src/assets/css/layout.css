@@ -1,0 +1,82 @@
+@layer layout {
+  .container {
+    width: 100%;
+    max-width: var(--container);
+    margin-inline: auto;
+    padding-inline: var(--space-4);
+  }
+  .container--narrow { max-width: var(--container-narrow); }
+
+  .section { padding-block: var(--space-8); }
+
+  .skip-link {
+    position: absolute;
+    left: var(--space-4);
+    top: -100%;
+    z-index: 100;
+    padding: var(--space-2) var(--space-4);
+    background: var(--fg);
+    color: var(--bg);
+    border-radius: var(--radius);
+  }
+  .skip-link:focus { top: var(--space-2); }
+
+  /* En-tête & navigation (le menu reste visible sans JS) */
+  .site-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: color-mix(in srgb, var(--bg) 92%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--border);
+  }
+  .site-header__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    min-height: var(--header-h);
+  }
+  .site-header__brand { font-weight: 700; letter-spacing: -0.01em; text-decoration: none; }
+
+  .site-nav ul { display: flex; flex-wrap: wrap; gap: var(--space-5); margin: 0; padding: 0; list-style: none; }
+  .site-nav a { display: inline-block; padding-block: var(--space-2); text-decoration: none; }
+  .site-nav a:hover { text-decoration: underline; }
+  .site-nav a[aria-current="page"] { text-decoration: underline; text-underline-offset: 0.35em; }
+
+  .nav-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-2);
+    min-width: 2.75rem;
+    min-height: 2.75rem;
+    padding: 0;
+    background: none;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    cursor: pointer;
+  }
+  .nav-toggle__icon {
+    width: 1.25rem;
+    height: 0.875rem;
+    background:
+      linear-gradient(currentColor 0 0) top / 100% 2px no-repeat,
+      linear-gradient(currentColor 0 0) center / 100% 2px no-repeat,
+      linear-gradient(currentColor 0 0) bottom / 100% 2px no-repeat;
+  }
+
+  @media (max-width: 47.99em) {
+    [data-enhanced] .nav-toggle { display: inline-flex; }
+    [data-enhanced] .site-nav { display: none; flex-basis: 100%; }
+    [data-enhanced] .site-nav[data-open] { display: block; }
+    [data-enhanced] .site-nav ul { flex-direction: column; gap: 0; padding-bottom: var(--space-4); }
+  }
+
+  /* Pied de page */
+  .site-footer { border-top: 1px solid var(--border); padding-block: var(--space-6); font-size: var(--text-sm); color: var(--muted); }
+  .site-footer__inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-4); }
+  .site-footer p { margin: 0; }
+  .site-footer ul { display: flex; flex-wrap: wrap; gap: var(--space-4); margin: 0; padding: 0; list-style: none; }
+}

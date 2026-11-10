@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+<head>
+{{> head }}
+</head>
+<body class="{{ page.bodyClass }}">
+<a class="skip-link" href="#main">Aller au contenu principal</a>
+{{> header }}
+<main id="main" tabindex="-1">
+{{{ content }}}
+</main>
+{{> footer }}
+{{> cookie-banner }}
+</body>
+</html>

@@ -1,0 +1,23 @@
+<div class="cookie-banner" role="dialog" aria-modal="false" aria-labelledby="cookie-title" aria-describedby="cookie-desc" data-cookie-banner hidden>
+  <h2 id="cookie-title" class="cookie-banner__title" tabindex="-1">Vos préférences de cookies</h2>
+  <p id="cookie-desc">
+    Nous utilisons des cookies strictement nécessaires au fonctionnement du site. Les autres (mesure d'audience, marketing) ne sont déposés qu'avec votre accord.
+    <a href="/politique-confidentialite/#cookies">En savoir plus</a>.
+  </p>
+
+  <form class="cookie-banner__prefs" data-cookie-prefs hidden>
+    <fieldset>
+      <legend class="visually-hidden">Catégories de cookies</legend>
+      <label class="check"><input type="checkbox" checked disabled> Nécessaires (toujours actifs)</label>
+      <label class="check"><input type="checkbox" name="analytics"> Mesure d'audience</label>
+      <label class="check"><input type="checkbox" name="marketing"> Marketing</label>
+    </fieldset>
+    <button class="btn" type="submit">Enregistrer mes choix</button>
+  </form>
+
+  <div class="cookie-banner__actions">
+    <button class="btn" type="button" data-cookie-action="reject">Tout refuser</button>
+    <button class="btn" type="button" data-cookie-action="accept">Tout accepter</button>
+    <button class="btn btn--ghost" type="button" data-cookie-action="customize" aria-expanded="false">Personnaliser</button>
+  </div>
+</div>

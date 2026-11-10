@@ -1,0 +1,35 @@
+{
+  "name": "[Nom du site]",
+  "shortName": "[Nom court]",
+  "url": "https://example.com",
+  "lang": "fr",
+  "locale": "fr_FR",
+  "description": "[Description du site en 120 à 160 caractères, avec le mot-clé principal.]",
+  "themeColor": "#0a0a0a",
+  "backgroundColor": "#ffffff",
+  "ogImage": "/assets/img/og-default.png",
+  "twitter": "",
+  "organization": {
+    "name": "[Nom de l'entreprise]",
+    "logo": "/assets/img/icon-512.png",
+    "email": "contact@example.com",
+    "sameAs": []
+  },
+  "nav": [
+    { "label": "Accueil", "href": "/" },
+    { "label": "Contact", "href": "/contact/" }
+  ],
+  "footerNav": [
+    { "label": "Mentions légales", "href": "/mentions-legales/" },
+    { "label": "Confidentialité", "href": "/politique-confidentialite/" },
+    { "label": "CGV", "href": "/cgv/" },
+    { "label": "CGU", "href": "/cgu/" }
+  ],
+  "fonts": {
+    "preload": []
+  },
+  "form": {
+    "endpoint": "",
+    "minFillMs": 3000
+  }
+}

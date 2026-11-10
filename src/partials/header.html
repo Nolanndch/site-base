@@ -1,0 +1,12 @@
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="site-header__brand" href="/">{{ site.name }}</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" data-nav-toggle>
+      <span class="visually-hidden">Menu</span>
+      <span class="nav-toggle__icon" aria-hidden="true"></span>
+    </button>
+    <nav id="primary-nav" class="site-nav" aria-label="Navigation principale">
+      {{{ nav }}}
+    </nav>
+  </div>
+</header>
